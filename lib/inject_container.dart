@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'data/datasources/locals/forecast_local.dart';
 import 'data/datasources/remotes/api_client.dart';
 import 'data/datasources/remotes/forecast_remotes.dart';
-import 'data/datasources/repositories/forecast_repo.dart';
+import 'data/repositories/forecast_repo.dart';
 import 'domaine/repositories/forecast_repo.dart';
 import 'domaine/usesCases/forecast_usecase.dart';
 import 'helpers/helper_network.dart';

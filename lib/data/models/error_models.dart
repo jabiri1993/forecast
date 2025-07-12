@@ -1,4 +1,4 @@
-import '../remotes/api_client.dart';
+import '../datasources/remotes/api_client.dart';
 
 class ErrorModel {
   int code;

@@ -1,8 +1,8 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:forecast/data/datasources/locals/forecast_local.dart';
-import 'package:forecast/data/datasources/models/error_models.dart';
 import 'package:forecast/data/datasources/remotes/forecast_remotes.dart';
-import 'package:forecast/data/datasources/repositories/forecast_repo.dart';
+import 'package:forecast/data/models/error_models.dart';
+import 'package:forecast/data/repositories/forecast_repo.dart';
 import 'package:forecast/domaine/usesCases/forecast_usecase.dart';
 import 'package:forecast/helpers/helpers_test.dart';
 import 'package:mockito/annotations.dart';

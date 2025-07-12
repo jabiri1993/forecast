@@ -5,7 +5,7 @@ import '../../../helpers/exeptions.dart';
 import '../../../helpers/helper_network.dart';
 import '../../../helpers/logger.dart';
 import '../../../inject_container.dart';
-import '../models/error_models.dart';
+import 'package:forecast/data/models/error_models.dart';
 
 enum MethodType { GET, POST, PUT, DELETE }
 

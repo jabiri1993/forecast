@@ -1,4 +1,5 @@
-import '../../../data/datasources/models/error_models.dart';
+
+import '../../../data/models/error_models.dart';
 import '../../../domaine/repositories/forecast_repo.dart';
 import '../../../helpers/app_export.dart';
 import '../models/forecast_model.dart';

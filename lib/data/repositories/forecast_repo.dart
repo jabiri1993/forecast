@@ -1,8 +1,9 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import '../../../domaine/repositories/forecast_repo.dart';
-import '../locals/forecast_local.dart';
-import '../models/error_models.dart';
-import '../remotes/forecast_remotes.dart';
+import '../datasources/locals/forecast_local.dart';
+import '../datasources/remotes/forecast_remotes.dart';
+import 'package:forecast/data/models/error_models.dart';
+
 
 class ForecastRepositoryImpl implements ForecastRepository {
   final ForecastRemoteDataSource remoteDataSource;
