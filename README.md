@@ -1,15 +1,30 @@
-Points clés du projet : 
-Architecture Clean:
-Domain Layer: Logique métier pure (entities, use cases, repository interfaces)
-Data Layer : Implémentation des repositories (API + cache local)
-Presentation Layer : UI avec gestion d’état   
- Injection de dépendances :get_it pour l’injection des services et repositoriesProvider 
- pour la gestion du contexte UI  Gestion d’état :flutter_bloc pour une gestion réactive et modulaire des états  
- Fonctionnalité Offline :Utilisation de SharedPreferences pour la persistance locale des données Stratégie de cache : Priorité aux données locales si hors connexion
-lib/
-├── domain/          #use cases, repository contracts
-├── data/            # Sources de données (API, SharedPreferences)
-├── presentation/    # UI + Blocs
-└── injection.dart   # Configuration de get_it
+# Weather forecast App - Clean Architecture
 
-Points d’attention :Les données sont mises en cache pendant 1 heure (configurable via cacheDate)
+**Application météo avec** :
+
+- Clean Architecture (Domain/Data/Presentation)
+- Gestion d'état avec BLoC
+- Prise en charge offline via SharedPreferences
+- Internationalisation (en/fr)
+
+## 📦 Fonctionnalités
+
+- **Prévisions horaires** et quotidiennes
+- **Mode offline** avec cache intelligent
+- **Multi-langue** : Anglais/Français
+- **Unités configurables** : °C/°F, km/h/mph
+
+## 🛠 Stack Technique
+
+| Couche           | Technologies                              |
+|------------------|-------------------------------------------|
+| **Domain**       | Dart, Equatable                           |
+| **Data**         | Dio, SharedPreferences, Connectivity_plus |
+| **Presentation** | Flutter 3.x, BLoC, Provider               |
+| **Tooling**      | get_it, Mockito, Build_runner             |
+
+## ⚡ Performance
+
+- Cache valide 1h (configurable)
+- Taille APK : ~8MB (release)
+- Taux de rafraîchissement : 60 FPS
