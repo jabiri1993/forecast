@@ -4,6 +4,7 @@ import '../../../helpers/constans.dart';
 import '../../../helpers/exeptions.dart';
 import '../../../helpers/helper_network.dart';
 import '../../../helpers/logger.dart';
+import '../../../inject_container.dart';
 import '../models/error_models.dart';
 
 enum MethodType { GET, POST, PUT, DELETE }
@@ -23,8 +24,8 @@ class ApiClient {
 }
 
 class Request {
-  Dio _dio = Dio();
-  NetworkInfo networkInfo = NetworkInfo();
+  Dio _dio = getIt<Dio>();
+  final NetworkInfo _networkInfo = getIt<NetworkInfo>();
 
   Request({required String baseUrl}) {
     _dio = Dio(BaseOptions(
@@ -42,7 +43,7 @@ class Request {
       Map<String, dynamic>? queryParams,
       Map<String, dynamic>? headers}) async {
     Logger.log("URL: $endPoint\nbody: $data");
-    if (!await networkInfo.isConnected()) {
+    if (!await _networkInfo.isConnected()) {
       NoInternetException('no_internet'.tr);
       return null;
     } else {

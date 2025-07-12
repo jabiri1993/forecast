@@ -1,16 +1,8 @@
-# forecast
+Points clés du projet :  Architecture Clean :Domain Layer : Logique métier pure (entities, use cases, repository interfaces)Data Layer : Implémentation des repositories (API + cache local)Presentation Layer : UI avec gestion d’état  Injection de dépendances :get_it pour l’injection des services et repositoriesProvider pour la gestion du contexte UI  Gestion d’état :flutter_bloc pour une gestion réactive et modulaire des états  Fonctionnalité Offline :Utilisation de SharedPreferences pour la persistance locale des donnéesStratégie de cache : Priorité aux données locales si hors connexion
+lib/
+├── domain/          #use cases, repository contracts
+├── data/            # Sources de données (API, SharedPreferences)
+├── presentation/    # UI + Blocs
+└── injection.dart   # Configuration de get_it
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Points d’attention :Les données sont mises en cache pendant 1 heure (configurable via cacheDate)
